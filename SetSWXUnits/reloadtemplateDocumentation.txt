@@ -1,0 +1,38 @@
+ReloadTemplate Method (ISheet)
+
+Reloads the sheet format from the original sheet format template.
+.NET Syntax
+Visual Basic (Declaration)	 
+Function ReloadTemplate( _
+   ByVal KeepNoteChanges As System.Boolean _
+) As System.Integer
+Visual Basic (Usage)	 
+Dim instance As ISheet
+Dim KeepNoteChanges As System.Boolean
+Dim value As System.Integer
+ 
+value = instance.ReloadTemplate(KeepNoteChanges)
+C#	 
+System.int ReloadTemplate( 
+   System.bool KeepNoteChanges
+)
+C++/CLI	 
+System.int ReloadTemplate( 
+&   System.bool KeepNoteChanges
+) 
+Parameters
+KeepNoteChanges
+True to keep note modifications made to the sheet format and reload all other elements from the original sheet format template, false to reload all elements from the original sheet format template and discard any note modifications made to the sheet format
+Return Value
+Status as defined in swReloadTemplateResult_e
+Example
+Modify and Reload Sheet Format Template (C#)
+Modify and Reload Sheet Format Template (VB.NET)
+Modify and Reload Sheet Format Template (VBA)
+Remarks
+If new notes are added or existing notes modified or deleted on the sheet format, then specifying true for KeepNoteChanges:
+
+adds the new notes to the sheet format template, but does not duplicate the new notes on the sheet format.
+restores any deleted notes from the sheet format template on the sheet format.
+duplicates all other notes in their original position from the sheet format template on the sheet format.
+ 
